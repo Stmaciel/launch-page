@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background: linear-gradient(to top right, pink, white, brown)
+    }
+    
+    nav{
+      width: 250px;
+      position:absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 5px 7px 10px rgba(0, 0, 0, .5)
+    }
+    nav ul{
+      position: relative;
+      list-style-type: none;
+    }
+    nav ul li a{
+      display: flex;
+        align-items: center;
+        font-family: arial;
+        font-size: 1.15em;
+        text-decoration: none;
+      text-transform: capitalize;
+        color: #000;
+        padding: 10px 30px;
+        height: 50px;
+    }
+    nav ul li a:hover{
+      background: rgba(0, 0, 0.7);
+      color: #fff;
+    }
+    
+    .wrapper{
+      display:flex;
+      flex-flow:row wrap;
+      text-align:center;
+    }
+    .wrapper >*{
+      padding:10px;
+      margin:10px;
+      flex:1 100%;
+      border-radius:10px;
+    }
+    
+    .main{
+      text-align:left ;
+      background: url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400);
+      height: 450px;
+      font-size:24px;
+    }
+    .header{
+      background:url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400) ;
+      height:150px ;
+      color:brown;
+      font-family:"Courier New";
+    }
+    
+    .footer{
+      background:url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400);
+      padding-bottom:200px;
+      height:120px ;
+      font-family:"Courier New";
+    }
+    
+    .aside1{
+      background:url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400);
+      font-family:"Courier New";
+    }
+    .aside2{
+      background:url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400);
+      font-family:"Courier New";
+    }
+    
+    
+    @media all and (min-width: 800px){
+      .main{
+        flex: 3;
+      }
+    
+    .aside1{
+      order:1;
+    }
+    .aside2{
+      order:2;
+    }
+      .main{
+        order:2;
+      }
+      
+      .footer{
+        order:4;
+      }
+    }
+    @media all and (min-width:600px){
+      .aside{
+        flex:1;
+      }
+    }
+    img{
+      width:25px;
+      height: 50px;
+      
+      text-align: left;
+      
+    } 
+    
+    p{
+      font-size:15px;
+    }
+    
+    .container{
+      height: 100%;
+        position: relative;
+    }
+    .container div{
+      display: flex;
+        height:60px;
+        background: url(https://images.unsplash.com/photo-1681589443572-2477e01fd8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODMyMzM1NTQ&ixlib=rb-4.0.3&q=80&w=400);
+      box-shadow: 0 2px 5px #000;
+    }
+    .container div label{
+      font-size:2.3em;
+      height: 100%;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+    input[type=checkbox] {
+      display:none;
+    }
+    .container div label:hover{
+    color:#fff;
+    background:#000;
+    }
+    
+    
+    .container nav{
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      width: 0;
+      background: rgba(0,0,0,.1);
+      box-shadow: 2px 5px 5px #000;
+      overflow:hidden;
+      transition: .5s ease;
+    }
+    
+    .container nav ul li a {
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      font-family: arial;
+      color: #000;
+      text-decoration: none;
+      text-transform: capitalize;
+      padding: 10px 30px;
+      height: 50px;
+      transition: .5s ease;
+    }
+    
+    
+    .container nav ul li a:hover {
+      background: white;
+        color: black;
+        border-right: 5px solid #fff;
+    }
+    
+    input[type=checkbox]:checked ~ nav {
+      width: 250px;
+    }
